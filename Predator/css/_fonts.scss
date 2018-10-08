@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('../fonts/MyriadPro-It.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Predator';
+    src: url('../fonts/Predator-Bold.otf') format('opentype'),
+        url('../fonts/Predator-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Predator';
+    src: url('../fonts/Predator-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTSquares';
+    src: url('../fonts/TTSquares-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'TTSquares';
+    src: url('../fonts/TTSquares-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}

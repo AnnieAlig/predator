@@ -1,0 +1,23 @@
+$color_white: rgb( 255, 255, 255 );
+$color_black: rgb(0, 0, 0);
+$color_hover: #1dfc9b;
+
+$color_white_op: rgba(255,255,255,.8);
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .зареєструватись {
+    font-size: 22px;
+    font-family: "TT Squares";
+    text-transform: uppercase;
+    position: absolute;
+    left: 130px;
+    top: 521px;
+    width: 242px;
+    height: 16px;
+    z-index: 13;
+  }
+  

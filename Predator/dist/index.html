@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./img/favicon1100.ico" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N5J7ZKZ');</script>
+    <!-- End Google Tag Manager -->
+    
 
     <link rel="stylesheet" href="./css/vendors/fullpage.css">
     <link rel="stylesheet" href="./css/stylemin.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5J7ZKZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div id="fullpage">
         <div class="section intro">
-            <img src="./img/svg/gaming_day.svg" alt="gaming day" class="intro__logo">
+            <a href="javascript:void(0)" class="mute" id="video_mute">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 29 25" style="enable-background:new 0 0 29 25;" xml:space="preserve">
+                    <path d="M16.1,0.2c-0.5-0.3-1.2-0.3-1.7,0c0,0,0,0-0.1,0.1L7,6.5H1.2c-0.3,0-0.5,0.2-0.5,0.5v10.3c0,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.2,0.2,0.4,0.2l5.8,0l7.4,6.8c0,0,0.1,0,0.1,0.1c0.3,0.2,0.6,0.2,0.9,0.2c0.3,0,0.6-0.1,0.8-0.2c0.5-0.3,0.9-0.9,0.9-1.5V1.7C17,1.1,16.7,0.5,16.1,0.2z M15.9,23.3c0,0.2-0.1,0.4-0.3,0.6c-0.1,0-0.3,0.1-0.5,0l-7.3-6.7v-2.5c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5v2.2l-4.9,0V7.6h4.9v2.2c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V7.3L15,1.2c0.2-0.1,0.5,0,0.6,0c0.2,0.1,0.3,0.3,0.3,0.6V23.3z M21.8,2.2c-0.3-0.1-0.6,0.1-0.7,0.3c-0.1,0.3,0.1,0.6,0.3,0.7c3.9,1.3,6.5,4.9,6.5,9c0,4.1-2.6,7.7-6.4,9c-0.3,0.1-0.4,0.4-0.3,0.7c0.1,0.2,0.3,0.4,0.5,0.4c0.1,0,0.1,0,0.2,0c4.3-1.5,7.2-5.5,7.2-10C28.9,7.7,26.1,3.7,21.8,2.2z M24.1,12.2c0-3.2-2.2-6.1-5.3-7c-0.3-0.1-0.6,0.1-0.7,0.4c-0.1,0.3,0.1,0.6,0.4,0.7c2.7,0.8,4.5,3.2,4.5,6c0,2.8-1.9,5.2-4.5,6c-0.3,0.1-0.5,0.4-0.4,0.7c0.1,0.2,0.3,0.4,0.5,0.4c0.1,0,0.1,0,0.2,0C21.9,18.4,24.1,15.5,24.1,12.2z"></path>
+                </svg>
+            </a>
+            <div class="intro__video">
+                <video width="100%" height="100%" autoplay poster="./img/intro.jpg" id="intro_video">
+                    <source src="video_intro.mp4" type='video/mp4;'>
+                </video>
+            </div>
+            <div class="intro__after-video fade" id="video_after">
+                <img src="./img/svg/gaming_day.svg" alt="gaming day" class="intro__logo">
+            </div>
             <a href="#about_us" id="scrollToNext" class="intro__next"></a>
         </div>
         <div class="section about_us">
@@ -125,25 +151,28 @@
             <div class="content">
                 <img src="./img/svg/predator_logo.svg" alt="predator" class="brand_logo brand_logo--top">
                 <div class="content__text">
-                    <form action="" class="form" id="register_form">
+                    <form methd="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSfoD6nANt7jFCBQVSQ17VMJiZ3Hr1XaJwrE312_k220Vg1UTw/formResponse" class="form" id="register_form">
                         <div class="form__control">
-                            <input type="text" class="form__input" id="nickname">
+                            <input type="text" class="form__input" id="nickname" name="entry.834596403" required>
                             <label for="nickname" class="form__label">НІК-нейм</label>
                         </div>
                         <div class="form__control">
-                            <input type="email" class="form__input" id="email">
+                            <input type="email" class="form__input" id="email" name="entry.2035732793" required>
                             <label for="email" class="form__label">е-пошта</label>
                         </div>
                         <div class="form__control">
-                            <input type="tel" class="form__input" id="phone">
+                            <input type="tel" class="form__input" id="phone" name="entry.805074139" required>
                             <label for="phone" class="form__label">контактний телефон</label>
                         </div>
                         <div class="form__control">
-                            <input type="checkbox" class="form__checkbox" hidden id="checkbox">
+                            <input type="checkbox" class="form__checkbox" hidden id="checkbox" required>
                             <label for="checkbox" class="checkbox_label form__label">Підтверджую реєстрацію</label>
                         </div>
                         <button class="form__submit">зареєструватись</button>
                     </form>
+                    <div class="form_success fade">
+                        <p>До зустрічі!</p>
+                    </div>
                     <p class="text-left">РЕЄСТРУЙСЯ ТА ОТРИМУЙ ПОДАРУНОК ВІД <br/>
                         PREDATOR ТА COMFY!</p>
                 </div>

@@ -60,3 +60,63 @@ for(i = 0; i<inputs.length; i++){
 	}
 }
 
+var mute_btn = document.getElementById("video_mute");
+var video = document.getElementById("intro_video");
+mute_btn.onclick = function(){
+	if(video.muted){
+		this.classList.remove('muted');
+		video.muted= false;
+	} else{
+		this.classList.add('muted');
+		video.muted= true;
+	}
+}
+video.addEventListener('ended',function() {
+	var after = document.getElementById("video_after");
+	after.style.display = "flex";
+})
+
+
+document.querySelector('#register_form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	var data = new FormData(this); // create new FormData object
+	data = data.entries();
+	var obj = data.next(); // access Iterator
+	var retrieved = {};
+	while(undefined !== obj.value) {    
+			retrieved[obj.value[0]] = obj.value[1];
+			obj = data.next();
+	}
+
+	var XHR = new XMLHttpRequest();
+	var urlEncodedData = "";
+	var urlEncodedDataPairs = [];
+
+	for(var name in retrieved) {
+			urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(retrieved[name]));
+	}
+	urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+	XHR.addEventListener('load', function(event) {
+			console.log('Data sent.');
+			showSuccess();
+	});
+	XHR.addEventListener('error', function(event) {
+			console.log('Oops! Something goes wrong.');
+			showSuccess();
+	});
+
+	XHR.open('POST', 'https://docs.google.com/forms/d/e/1FAIpQLSfoD6nANt7jFCBQVSQ17VMJiZ3Hr1XaJwrE312_k220Vg1UTw/formResponse');
+	XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	XHR.send(urlEncodedData); // send the form
+});
+
+//https://docs.google.com/forms/d/e/1FAIpQLSf_YjNIlz13snHwyPsh_tiJuPvLGI_HFbWU02AuFLM0jSteig/formResponse
+
+function showSuccess(){
+	var success = document.querySelector('.form_success');
+	success.style.display = "flex";
+	setTimeout(function(){
+		success.style.display = "none";
+	}, 3000);
+}

@@ -192,25 +192,88 @@ img {
   background-position: center;
   position: relative; }
 
-.intro {
-  background-image: url(../img/intro.jpg); }
-  .intro__logo {
-    max-width: 320px;
-    height: auto;
-    max-height: 40%;
-    display: block;
-    margin: auto; }
-  .intro__next {
-    display: block;
-    width: 65px;
-    height: 60px;
-    background-image: url(../img/svg/ic_arrow_down.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.intro__next {
+  display: block;
+  width: 65px;
+  height: 60px;
+  background-image: url(../img/svg/ic_arrow_down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: calc(50% - 33px);
+  bottom: 10%;
+  z-index: 20; }
+
+.intro__video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .intro__video video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.intro .mute {
+  position: absolute;
+  display: block;
+  top: 60px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  opacity: 0.6; }
+  .intro .mute svg {
+    fill: white; }
+  .intro .mute:hover {
+    opacity: 1; }
+  .intro .mute.muted::after {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    content: "";
     position: absolute;
-    left: calc(50% - 33px);
-    bottom: 10%; }
+    width: calc(100% + 10px);
+    height: 1px;
+    top: calc(50% - 4px);
+    left: -8px;
+    background-color: white;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+.intro__after-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  background-image: url(../img/intro.jpg);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .intro__after-video.fade {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s; }
+
+.intro__logo {
+  max-width: 320px;
+  height: auto;
+  max-height: 40%;
+  display: block;
+  margin: auto;
+  position: relative; }
 
 .about_us {
   background-image: url(../img/about_us.jpg); }
@@ -278,6 +341,28 @@ img {
 
 .registration {
   background-image: url(../img/register.jpg); }
+  .registration .content__text {
+    position: relative; }
+  .registration .form_success {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 300px;
+    height: 200px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: none; }
+    @media (min-width: 768px) {
+      .registration .form_success {
+        left: 60px; } }
+    @media (min-width: 1440px) {
+      .registration .form_success {
+        left: 120px; } }
 
 .contact {
   background-image: url(../img/contact.jpg); }
